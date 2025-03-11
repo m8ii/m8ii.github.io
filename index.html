@@ -1,41 +1,140 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Upload to Webhook</title>
-</head>
-<body>
-    <h2>Upload a File</h2>
-    <input type="file" id="fileInput">
-    <button onclick="uploadFile()">Upload</button>
-
-    <script>
-        function uploadFile() {
-            const fileInput = document.getElementById("fileInput");
-            if (fileInput.files.length === 0) {
-                alert("Please select a file.");
-                return;
+    <title>When I Was The Greatest</title>
+    <meta name="description"
+        content="Explore the world of 'When I Was The Greatest'! Discover characters, plot summaries, themes, and more. Read reviews and find out where to buy.">
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "lit": "https://cdn.jsdelivr.net/npm/lit@3/+esm"
             }
-
-            const file = fileInput.files[0];
-            const formData = new FormData();
-            formData.append("file", file);
-
-            fetch("https://discord.com/api/webhooks/1334659315507789925/XTGeLAxjsd6qmmys3bx0nzVI_sN8LfvgcCkecGMFlayM3HBDpU9acvzlGj02FFpnIxM-", { // Replace with your webhook URL
-                method: "POST",
-                body: formData
-            })
-            .then(response => response.text())
-            .then(data => {
-                alert("File uploaded successfully!");
-                console.log(data);
-            })
-            .catch(error => {
-                alert("Error uploading file.");
-                console.error("Error:", error);
-            });
         }
     </script>
+    <script type="module" src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>When I Was The Greatest</h1>
+            <nav>
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#characters">Characters</a></li>
+                    <li><a href="#plot">Plot Summary</a></li>
+                    <li><a href="#themes">Themes</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#buy">Buy the Book</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="overview" class="book-section">
+                <h2>Overview</h2>
+                <div class="overview-content">
+                    <p>In the heart of Brooklyn, New York, Ali cherishes his neighborhood. He lives with his 11-year-old sister, Jazz, and their strong-willed mother, Doris. Despite the ever-present challenges of drugs, gangs, and trouble, Ali manages to steer clear. Doris emphasizes the importance of education, viewing it as a gateway to opportunities. She works tirelessly at two jobs, determined to prevent her children from following their father's troubled path. Jazz is exceptionally bright for her age, and Ali takes immense pride in her. Their bond is strong, and Ali recognizes its value.</p>
+                    <img src="https://booksupnorth.com/wp-content/uploads/2022/03/When-I-was-the-Greatest.jpg" alt="Book Cover" class="book-cover">
+                </div>
+            </section>
+
+            <section id="characters" class="book-section">
+                <h2>Characters</h2>
+                <div class="characters-grid">
+                    <div class="character">
+                        <h3>Allen (Ali)</h3>
+                        <p>A decent, churchgoing kid navigating the challenges of growing up in Brooklyn. Proud of his sister Jazz and values their bond. Ali makes some bad mistakes with significant consequences.</p>
+                    </div>
+                    <div class="character">
+                        <h3>Jasmine (Jazz)</h3>
+                        <p>Ali's witty 11-year-old sister, known for her knack for giving nicknames and her intelligence. She shares a close bond with Ali.</p>
+                    </div>
+                    <div class="character">
+                        <h3>Doris</h3>
+                        <p>Ali and Jazz's no-nonsense mom, a social worker working hard to raise her children right. Works two jobs to keep them from following their father's path.</p>
+                    </div>
+                    <div class="character">
+                        <h3>Noodles (Roland)</h3>
+                        <p>Ali's best friend. Often shares meals at Ali's home. Known for his false bravado and occasional unwarranted aggression, which Ali dislikes.</p>
+                    </div>
+                    <div class="character">
+                        <h3>Needles (Ricky)</h3>
+                        <p>Another close friend with Tourette's syndrome. With Doris's help, he manages his condition and is rarely seen without his knitting needles.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="plot" class="book-section">
+                <h2>Plot Summary</h2>
+                <p>The story unfolds in the Bedford-Stuyvesant section of Brooklyn, highlighting Ali, his sister Jazz, and their relationships with family and friends like Noodles and Needles. It explores themes of family, acceptance, and belonging within the context of black culture.</p>
+                <p>Next door to Ali is a notorious building. Five years earlier, two brothers moved in with their mother. Now about 15 years old, their home life contrasts sharply with Ali's.</p>
+                <p>When they get an invitation to a party, they seize the opportunity. Amidst alcohol, loud music, and older girls, Ali feels out of his depth. However, more significant events are about to unfold.</p>
+                <p>His boxing lessons help save a friend's life, but the aftermath terrifies Ali. He witnesses a different side of Noodles, followed by threats and violence. Ali wonders if life has changed forever for him and those he cares about.</p>
+            </section>
+
+            <section id="themes" class="book-section">
+                <h2>Themes</h2>
+                <ul>
+                    <li>Family: The story examines the complexities of family relationships.</li>
+                    <li>Acceptance and Belonging: Characters seek acceptance despite cultural differences.</li>
+                    <li>Black Culture: Offers insight into American, black culture.
+                    </li>
+                </ul>
+            </section>
+
+            <section id="reviews" class="book-section">
+                <h2>Reviews</h2>
+                <div class="reviews-carousel">
+                    <div class="review">
+                        <p>Getting to know the characters in <i>When I Was The Greatest</i> was a true pleasure. Ali tells
+                            his story direct to the reader, personalising it even more as we learn how he met the
+                            brothers next door. The contrast between Ali and his best friend Needles is obvious and
+                            often uneasy, but the care that Aliâs mum has for the neglected boys is heartening, smoothing
+                            sharpening edges.</p>
+                    </div>
+                    <div class="review">
+                        <p>When things go terribly wrong, even Ali believes there is only one way out â violence. The
+                            actual solution is unexpected â by Ali and myself, and pure heart. Maybe it can be the
+                            solution to other things in his life too.</p>
+                    </div>
+                    <div class="review">
+                        <p>Many scenes are brought to life for the reader by illustrator Akhran Girmay, with emotion
+                            pouring out on the page.</p>
+                    </div>
+                    <div class="review">
+                        <p>A credible, convincing, coming of age story. I felt I was right there with the characters,
+                            living life in Brooklyn New York. I loved Ali and his family to bits!</p>
+                    </div>
+                    <div class="review">
+                        <p>Ali loves his neighbourhood in Brooklyn New York. Living with his 11 yr old sister Jazz and their no nonsense mum Doris, life is pretty good. Despite drugs, gangs and trouble never far away, he keeps away from all that stuff.
+                            Doris is strict about their education, drumming it into her children that school is a way to choices. She works two jobs since their dad left â and she doesnât want them following his path into trouble he couldnât get out of. Jazz is smart for an 11 yr old and Ali is proud of his sister. Theyâre close and he soon realises how precious their bond really is.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="buy" class="book-section">
+                <h2>Buy the Book</h2>
+                <p>Available at all major book retailers:</p>
+                <ul>
+                    <li><a href="#">Amazon</a></li>
+                    <li><a href="#">Barnes & Noble</a></li>
+                    <li><a href="#">Your Local Bookstore</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025</p>
+        </div>
+    </footer>
 </body>
+
 </html>
